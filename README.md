@@ -8,7 +8,7 @@ spring-bootのクラスタリングサンプル
 
 ### 起動方法
 以下のプロパティを起動時に指定
-* session.store.type=dynamo.db
+* session.store.type=dynamo-db
 * aws.access.key=[AWSのアクセスキーID]
 * aws.secret.key=[AWSのシークレットキー]
 * aws.dynamodb.region.id=[DynamoDBがあるリージョンのID]
