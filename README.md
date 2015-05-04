@@ -1,5 +1,5 @@
 # spring-boot-cluster-examples
-spring-bootのクラスタリングサンプル
+spring-bootのセッションクラスタリングサンプル
 
 ## DynamoDBの場合
 ### 制限事項
