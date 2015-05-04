@@ -13,6 +13,11 @@ spring-bootのセッションクラスタリングサンプル
 * aws.secret.key=[AWSのシークレットキー]
 * aws.dynamodb.region.id=[DynamoDBがあるリージョンのID]
 
+#### 設定上の注意点
+* DynamoDBSessionManagerの最新版(Tomcat8対応版）はMaven Repositoryに存在しないのでjarファイルをダウンロードする必要がある
+
 ## Redisの場合
-Spring Sessionを利用する
+Spring Sessionを利用する  
+枯れているライブラリはhttps://github.com/jcoleman/tomcat-redis-session-manager だが、
+Tomcat8には対応していない。
 * 未実装
