@@ -29,9 +29,6 @@ public class WebContainerConfigurationWithDynamoDB {
     @Value("${aws.secret.key}")
     String awsSecretKey;
 
-    @Value("${aws.dynamodb.endpoint}")
-    String awsDynamoDBEndPoint;
-
     @Value("${aws.dynamodb.region.id}")
     String awsDynamoDBRegionId;
 
@@ -39,7 +36,6 @@ public class WebContainerConfigurationWithDynamoDB {
         final DynamoDBSessionManager dynamoDBSessionManager = new DynamoDBSessionManager();
         dynamoDBSessionManager.setAwsAccessKey(awsAccessKey);
         dynamoDBSessionManager.setAwsSecretKey(awsSecretKey);
-        dynamoDBSessionManager.setEndpoint(awsDynamoDBEndPoint);
         dynamoDBSessionManager.setRegionId(awsDynamoDBRegionId);
         dynamoDBSessionManager.setSaveOnRestart(true); //シャットダウン時に永続化する。
         dynamoDBSessionManager.setCreateIfNotExist(true);
