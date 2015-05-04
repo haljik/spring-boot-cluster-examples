@@ -49,8 +49,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
-    compile("org.springframework.boot:spring-boot-starter-security:${springBootVersion}")
-    compile('org.thymeleaf.extras:thymeleaf-extras-springsecurity3:2.1.1.RELEASE')
+
+
+    compile('com.amazonaws:aws-java-sdk-dynamodb:1.9.33')
+    compile('com.amazonaws:aws-dynamodb-session-tomcat:1.0.2') {
+        exclude group: 'org.apache.tomcat'
+    }
 
     compile("commons-lang:commons-lang:2.6")
 
