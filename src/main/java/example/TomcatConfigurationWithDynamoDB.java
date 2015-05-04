@@ -32,10 +32,6 @@ public class TomcatConfigurationWithDynamoDB {
     @Value("${aws.dynamodb.region.id}")
     String awsDynamoDBRegionId;
 
-    /**
-     * Tomcat8に対応していないため、Spring-Bootの最新では動作しない。
-     * @return
-     */
     private DynamoDBSessionManager dynamoDBSessionManager() {
         final DynamoDBSessionManager dynamoDBSessionManager = new DynamoDBSessionManager();
         dynamoDBSessionManager.setAwsAccessKey(awsAccessKey);
