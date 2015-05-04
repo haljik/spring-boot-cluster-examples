@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ConditionalOnProperty(value="session.store.type", havingValue = "dynamo-db")
-public class WebContainerConfigurationWithDynamoDB {
+public class TomcatConfigurationWithDynamoDB {
 
     @Bean
     EmbeddedServletContainerFactory servletConteinerWithDynamoDBSessionManager() {
