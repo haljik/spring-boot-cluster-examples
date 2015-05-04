@@ -16,6 +16,7 @@ public class WebContainerConfigurationWithDynamoDB {
     EmbeddedServletContainerFactory servletConteinerWithDynamoDBSessionManager() {
         final TomcatEmbeddedServletContainerFactory tomcat = tomcat();
         tomcat.addContextCustomizers(context -> {
+            context.setBackgroundProcessorDelay(1);
             context.setManager(dynamoDBSessionManager());
              //stickyなら頻繁に書き込むのはむしろ無駄なのでリスタート時のみで良い。
 //            context.setBackgroundProcessorDelay(1);
