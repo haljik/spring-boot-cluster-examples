@@ -32,3 +32,20 @@ Redisが完全にSessionデータの置き場所となるのでsticky sessionに
 * spring.redis.host=[redis host]
 * spring.redis.password=[redis password] (設定していなければ不要)
 * spring.redis.port=[redis port]
+
+#### 検証環境の起動
+* DockerでのSpring Session Clusterの起動方法
+* DockerとDocker Composeがインストール済みであることが前提
+
+docker-compose.ymlのVIRTUAL_HOST二箇所を、dockerのホストへ変更した後以下のコマンドを実行
+
+```
+./startup-spring-session-cluster.sh
+```
+
+以下にアクセスするとロードバランサ（NGINX)経由でアクセスできる。
+
+```
+http:/dockerのホスト/
+```
+
