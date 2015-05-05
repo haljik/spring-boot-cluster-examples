@@ -6,6 +6,7 @@ spring-bootのセッションクラスタリングサンプル
 * sticky session前提  
   DynamoDBへの書き込み頻度は最高でも60秒ごと、リアルタイムにはならない
 * apacheのmod_proxy_balancerを使う場合、jvmRouteの指定ができないためmode_headersを使ったsticky session方式を取る必要がある。
+
 #### 起動方法
 以下のプロパティを起動時に指定
 * session.store.type=dynamo-db
