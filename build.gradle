@@ -50,9 +50,12 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}")
 
+    //For Spring Session & Redis
+    compile("org.springframework.boot:spring-boot-starter-redis:${springBootVersion}")
+    compile('org.springframework.session:spring-session:1.0.1.RELEASE')
 
+    //For DynamoDBSessionManager(本体はMavenRepositoryに存在しないため、libsに格納）
     compile('com.amazonaws:aws-java-sdk-dynamodb:1.9.33')
-
     compile fileTree(dir: 'libs', include: '*.jar')
 
     compile("commons-lang:commons-lang:2.6")
