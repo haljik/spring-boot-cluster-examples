@@ -30,7 +30,7 @@ Redisが完全にSessionデータの置き場所となるのでsticky sessionに
 
 * session.store.type=redis
 * spring.redis.host=[redis host]
-* spring.redis.password=[redis password] (設定していなければ不要)
+* spring.redis.password=[redis password] //設定していなければ不要
 * spring.redis.port=[redis port]
 
 #### 検証環境の起動
